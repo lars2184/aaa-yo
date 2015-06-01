@@ -28,7 +28,7 @@ $(document).ready(function(){
     // get existing data stored in Apigee
     client.getEntity(options, function(error, result){
 
-      if(error){
+      if(error || result.entities[0] === undefined){
 
         // if no data exists, create data
 
